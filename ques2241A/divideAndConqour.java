@@ -1,3 +1,4 @@
+package ques2241A;
 import java.util.Scanner;
 
 public class divideAndConqour {
