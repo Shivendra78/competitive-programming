@@ -12,20 +12,24 @@ public class Main {
             int n = sc.nextInt();
 
             int[] a = new int[n];
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
+            }
 
             Arrays.sort(a);
 
-            int mid = n / 2;
-            int median = a[mid];
+            int p = (n + 1) / 2 - 1;
+            int median = a[p];
 
             int ans = 0;
-
-            for (int i = mid; i < n && a[i] == median; i++)
-                ans++;
+            for (int i = p; i < n; i++) {
+                if (a[i] == median)
+                    ans++;
+            }
 
             System.out.println(ans);
         }
+
+        sc.close();
     }
 }
